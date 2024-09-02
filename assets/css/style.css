@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Onest", sans-serif;
+  color: #1b1a1a;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.header {
+  margin-top: 2rem;
+  height: 450px;
+  padding-block: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 2rem;
+  
+  .heading-wrapper,
+  .image-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .heading-wrapper {    
+    h1 {
+      margin-left: 45px;
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: left;
+      line-height: 3.5rem;
+
+      span {
+        position: relative;
+        font-size: 4.5rem;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 16px;
+          position: absolute;
+          inset-block-end: 1rem;
+          inset-inline-end: 0;
+          z-index: -1;
+          background-color: #f0db4f;
+        }
+      }
+    }
+  }
+
+  .image-wrapper {
+    height: 100%;
+    
+    img {
+      height: inherit;
+    }
+  }
+}
+
+.main {
+  margin-block: 4rem 2rem;
+
+  .project-cards-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;    
+    
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 8px;
+      border: 1px solid rgba(0 0 0 / 0.1);
+      box-shadow: 5px 5px 12px -10px rgba(0 0 0 / 0.8);
+      
+      .project-image {
+        height: 110px;
+        width: 100%;
+        border-radius: 8px 8px 16px 16px;
+        object-fit: cover;
+      }
+      
+      .project-content {
+        padding: 0.8rem;
+    
+        .project-title {
+          margin-bottom: 1rem;
+          font-size: 20px;
+        }
+    
+        .project-links-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          column-gap: .5rem;
+          
+          a {
+            width: 50%;
+            padding-block: 4px;
+            color: #1b1a1a;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid rgba(0 0 0 / 0.4);
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: .4rem;
+
+            img {
+              width: 1.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
