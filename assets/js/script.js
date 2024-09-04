@@ -20,20 +20,20 @@ const createProjectCard = project => {
   const projectCard = document.createElement("div");
   projectCard.classList.add("project-card");
   projectCard.innerHTML = `
-    <img src="${image}" alt="${title} image." class="project-image">
+    <img src="${image}" loading="lazy" class="project-image" alt="${title} image.">
   
     <div class="project-content">
-      <h2 class="project-title">${title}</h2>
+      <h2 class="project-title">${title}.</h2>
       
       <div class="project-links-wrapper">  
         <a href="${view}" target="_blank">
           View
-          <img src="/assets/icons/view.svg">
+          <img src="assets/icons/view.svg">
         </a>
           
         <a href="${code}" target="_blank">
           Code
-          <img src="/assets/icons/code.svg">
+          <img src="assets/icons/code.svg">
         </a>  
       </div>
     </div>
