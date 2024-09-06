@@ -1,0 +1,14 @@
+{
+  "name": "mini-web-projects",
+  "version": "1.0.0",
+  "description": "Mini web projects using HTML, CSS and TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -w"
+  },
+  "author": "Kevin Reyes",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}

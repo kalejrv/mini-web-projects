@@ -1,25 +1,19 @@
-import projects from "../data/projects.js";
-
+import { projects } from "./projects.js";
 document.addEventListener("DOMContentLoaded", () => {
-  addProjectCards();
+    addProjectCards();
 });
-
 const addProjectCards = () => {
-  const projectCardsWrapper = document.querySelector(".project-cards-wrapper");
-
-  projects.map(project => {
-    const projectCard = createProjectCard(project);
-
-    projectCardsWrapper.appendChild(projectCard);
-  });
+    const projectCardsWrapper = document.querySelector(".project-cards-wrapper");
+    projects.map(project => {
+        const projectCard = createProjectCard(project);
+        projectCardsWrapper.appendChild(projectCard);
+    });
 };
-
-const createProjectCard = project => {
-  const { image, title, view, code } = project;
-
-  const projectCard = document.createElement("div");
-  projectCard.classList.add("project-card");
-  projectCard.innerHTML = `
+const createProjectCard = (project) => {
+    const { image, title, view, code } = project;
+    const projectCard = document.createElement("div");
+    projectCard.classList.add("project-card");
+    projectCard.innerHTML = `
     <img src="${image}" loading="lazy" class="project-image" alt="${title} image.">
   
     <div class="project-content">
@@ -38,6 +32,5 @@ const createProjectCard = project => {
       </div>
     </div>
   `;
-
-  return projectCard;
+    return projectCard;
 };
