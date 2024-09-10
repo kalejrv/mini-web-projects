@@ -18,4 +18,5 @@ const buildProjectTitle = (str) => {
 };
 export const projects = [
     buildProjectData("expanding-cards"),
+    buildProjectData("progress-steps"),
 ];

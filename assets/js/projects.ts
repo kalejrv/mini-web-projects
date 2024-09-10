@@ -28,4 +28,5 @@ const buildProjectTitle = (str: string): string => {
 
 export const projects: Array<ProjectData> = [
   buildProjectData("expanding-cards"),
+  buildProjectData("progress-steps"),
 ];
